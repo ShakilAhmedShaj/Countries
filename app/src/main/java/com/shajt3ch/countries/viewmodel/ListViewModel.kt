@@ -18,7 +18,7 @@ import javax.inject.Inject
 class ListViewModel : ViewModel() {
 
     @Inject
-    private lateinit var countriesService: CountriesService
+    lateinit var countriesService: CountriesService
 
     private val disposable = CompositeDisposable()
 
