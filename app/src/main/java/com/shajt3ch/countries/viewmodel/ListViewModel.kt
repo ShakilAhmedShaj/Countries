@@ -25,7 +25,6 @@ class ListViewModel : ViewModel() {
 
     fun refresh() {
         fetchCountries()
-
     }
 
     private fun fetchCountries() {
