@@ -40,13 +40,10 @@ class ListViewModel : ViewModel() {
                         countryLoadError.value = false
                         loading.value = false
                     }
-
                     override fun onError(e: Throwable?) {
                         countryLoadError.value = true
                         loading.value = false
                     }
-
-
                 })
         )
     }
