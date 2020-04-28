@@ -1,9 +1,8 @@
 package com.shajt3ch.countries.model
 
+import com.shajt3ch.countries.di.DaggerApiComponent
 import io.reactivex.Single
-import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Inject
 
 /**
  * Created by Shakil Ahmed Shaj on 29,April,2020.
@@ -11,17 +10,12 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 class CountriesService {
 
-    private val BASE_URL = "https://raw.githubusercontent.com"
 
-    private val api: CountriesApi
+    @Inject
+    lateinit var api: CountriesApi
 
     init {
-        api = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build()
-            .create(CountriesApi::class.java)
+        DaggerApiComponent.create().inject(this)
     }
 
     fun getCountries(): Single<List<Country>> {
