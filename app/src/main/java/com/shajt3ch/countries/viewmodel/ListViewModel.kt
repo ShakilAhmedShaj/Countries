@@ -22,26 +22,26 @@ class ListViewModel : ViewModel() {
     private fun fetchCountries() {
         loading.value = true
         val mockData = listOf(
-            Country("CountryA"),
-            Country("CountryB"),
-            Country("CountryC"),
-            Country("CountryD"),
-            Country("CountryE"),
-            Country("CountryF"),
-            Country("CountryG"),
-            Country("CountryH"),
-            Country("CountryI"),
-            Country("CountryJ"),
-            Country("CountryK"),
-            Country("CountryL"),
-            Country("CountryM"),
-            Country("CountryN"),
-            Country("CountryO"),
-            Country("CountryP"),
-            Country("CountryQ"),
-            Country("CountryR"),
-            Country("CountryS"),
-            Country("CountryT")
+            Country("Country A"),
+            Country("Country B"),
+            Country("Country C"),
+            Country("Country D"),
+            Country("Country E"),
+            Country("Country F"),
+            Country("Country G"),
+            Country("Country H"),
+            Country("Country I"),
+            Country("Country J"),
+            Country("Country K"),
+            Country("Country L"),
+            Country("Country M"),
+            Country("Country N"),
+            Country("Country O"),
+            Country("Country P"),
+            Country("Country Q"),
+            Country("Country R"),
+            Country("Country S"),
+            Country("Country T")
         )
         countryLoadError.value = false
         loading.value = false
