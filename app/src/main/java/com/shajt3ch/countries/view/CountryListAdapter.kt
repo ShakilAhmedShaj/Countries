@@ -41,8 +41,8 @@ class CountryListAdapter(var countries: ArrayList<Country>): RecyclerView.Adapte
 
         fun bind(country: Country) {
             countryName.text = country.countryName
-            //countryCapital.text = country.capital
-            //imageView.loadImage(country.flag, progressDrawable)
+            countryCapital.text = country.capital
+            imageView.loadImage(country.flag, progressDrawable)
         }
     }
 }
